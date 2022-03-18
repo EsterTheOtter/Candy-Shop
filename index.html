@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    Hello world
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+let numCandyBags = 920;
+let numEmployees = Math.ceil(numCandyBags/200)
+const costOfDelivery = (numEmployees * 25) + (numCandyBags * 3);
+console.log(costOfDelivery);
+console.log(numEmployees);
+
+// Van
+numCandyBags = numCandyBags - (numCandyBags - 200);
+  do {
+    numCandyBags = numCandyBags - 200
+  } while (numCandyBags < 200);
+
+// bo 
+let remaining;
+const button = document.querySelector('button')
+  button.addEventListener('click',()=> {
+  const input = document.querySelector('input')
+  remaining = input.value;
+  let sweetsToFill = 1000 - remaining;
+  const employeeRequired = sweetsToFill / 200;
+  const deliveryCost = (sweetsToFill*3) + (employeeRequired*25)
+  console.log('num of sweets remaining ',remaining)
+
+  document.querySelector('#result').innerText = `${sweetsToFill} bags are required. ${employeeRequired} employees are required. ${deliveryCost} Total Cost of delivery`
+    input.value = '';
+})
+
+switch(remaining) {
+  case (remaining >0 && remaining <200):
+    console.log(sweetsToFill,' bags are needed.')
+    console.log(emplyeeRequired, ' employees are required')
+    console.log('Total cost is: ' + deliveryCost);
+    break;
+  case (remaining >200 && remaining <400):
+    console.log('between 200 to 400');
+    break;
+  case (remaining >400 && remaining <600):
+    console.log('between 400 to 600')
+    
+    break;
+  case (remaining >600 && remaining <800):
+    console.log('between 600 to 800')
+    break;
+  case (remaining >800 && remaining <1000):
+    console.log('between 800 to 1000')
+    break;
+  default:
+    console.log('Have a "SWEET" day!')
+}
+
+// 
+
+// Escape START
+
+console.log("Have a \“SWEET\” day!")
+
+// Escape END
+
+// Names START
+/*
+Roxanne Moreira
+Ryan Christian Fernandez
+Bo
+*/
+// Names END
+
+
+// 
+// 1000/200 candies = 5 employees max 
+// 
